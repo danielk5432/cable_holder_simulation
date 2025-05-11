@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3jaf70i4kpec"
+path="res://.godot/imported/Spring.obj-33ff9a102287c88ad0975c99654eacb2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Spring.obj-33ff9a102287c88ad0975c99654eacb2.mesh"]
+
+source_file="res://Spring.obj"
+dest_files=["res://.godot/imported/Spring.obj-33ff9a102287c88ad0975c99654eacb2.mesh", "res://.godot/imported/Spring.obj-33ff9a102287c88ad0975c99654eacb2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

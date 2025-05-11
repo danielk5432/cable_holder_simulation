@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cv77epmfmuoik"
+path="res://.godot/imported/Tension Lever.obj-764bf7294852530dc1118168bdc4e324.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tension Lever.obj-764bf7294852530dc1118168bdc4e324.mesh"]
+
+source_file="res://Tension Lever.obj"
+dest_files=["res://.godot/imported/Tension Lever.obj-764bf7294852530dc1118168bdc4e324.mesh", "res://.godot/imported/Tension Lever.obj-764bf7294852530dc1118168bdc4e324.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
