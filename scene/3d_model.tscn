@@ -15,6 +15,14 @@
 [node name="3dModel" type="Node3D"]
 script = ExtResource("1_dem37")
 
+[node name="TensionLever" type="Node3D" parent="."]
+transform = Transform3D(-0.999644, 0.0266829, 0, -0.0266829, -0.999644, 0, 0, 0, 1, 0, -10.5, 0)
+
+[node name="Model" type="MeshInstance3D" parent="TensionLever"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5, 0)
+mesh = ExtResource("4_wqg0l")
+skeleton = NodePath("../..")
+
 [node name="LowerPanel" type="Node3D" parent="."]
 
 [node name="Model" type="MeshInstance3D" parent="LowerPanel"]
@@ -22,6 +30,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
 mesh = ExtResource("1_hifu5")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_dem37")
+
+[node name="Powl" type="Node3D" parent="."]
+
+[node name="Model" type="MeshInstance3D" parent="Powl"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
+mesh = ExtResource("5_vsvwu")
+skeleton = NodePath("../..")
 
 [node name="MiddlePanel" type="Node3D" parent="."]
 
@@ -37,21 +52,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
 mesh = ExtResource("3_b4sdb")
 skeleton = NodePath("../..")
 
-[node name="TensionLever" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.5, 0)
-
-[node name="Model" type="MeshInstance3D" parent="TensionLever"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5, 0)
-mesh = ExtResource("4_wqg0l")
-skeleton = NodePath("../..")
-
-[node name="Powl" type="Node3D" parent="."]
-
-[node name="Model" type="MeshInstance3D" parent="Powl"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
-mesh = ExtResource("5_vsvwu")
-skeleton = NodePath("../..")
-
 [node name="Shaft" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.5, 0)
 
@@ -60,16 +60,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5, 0)
 mesh = ExtResource("6_au0gm")
 skeleton = NodePath("../..")
 
-[node name="SpringHousing" type="Node3D" parent="."]
-
-[node name="Model" type="MeshInstance3D" parent="SpringHousing"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
-mesh = ExtResource("7_fq0j8")
-skeleton = NodePath("../..")
-
 [node name="Spring" type="Node3D" parent="."]
 
 [node name="Model" type="MeshInstance3D" parent="Spring"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
 mesh = ExtResource("8_ifnfc")
+skeleton = NodePath("../..")
+
+[node name="SpringHousing" type="Node3D" parent="."]
+
+[node name="Model" type="MeshInstance3D" parent="SpringHousing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
+mesh = ExtResource("7_fq0j8")
 skeleton = NodePath("../..")

@@ -21,4 +21,9 @@ script = ExtResource("2_wx3ht")
 environment = SubResource("Environment_4ulk4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.561607, -0.513905, -0.648459, 0.825646, 0.399133, 0.398749, 0.0539026, -0.759338, 0.648459, 50, 50, 39.7337)
+transform = Transform3D(0.272104, -0.938087, 0.214365, 0.890992, 0.329757, 0.312079, -0.363445, 0.106079, 0.925556, 25.7446, 50, -125.882)
+light_energy = 0.6
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.300479, 0.587347, -0.751489, 0.814383, -0.568121, -0.118404, -0.496481, -0.576422, -0.649034, 26.6194, 127.083, 30.2276)
+light_energy = 0.6
