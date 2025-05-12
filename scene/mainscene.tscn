@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl3by4u5w63eb"]
+
+[ext_resource type="PackedScene" uid="uid://dq0xsoxyp7eaj" path="res://scene/3d_model.tscn" id="1_4ulk4"]
+[ext_resource type="Script" uid="uid://cnf2ebmadu4af" path="res://script/camera_control.gd" id="2_wx3ht"]
+
+[node name="Mainscene" type="Node3D"]
+
+[node name="3dModel" parent="." instance=ExtResource("1_4ulk4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CameraRig" type="Node3D" parent="."]
+script = ExtResource("2_wx3ht")
+
+[node name="Pivot" type="Node3D" parent="CameraRig"]
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig/Pivot"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.561607, -0.513905, -0.648459, 0.825646, 0.399133, 0.398749, 0.0539026, -0.759338, 0.648459, 50, 50, 39.7337)

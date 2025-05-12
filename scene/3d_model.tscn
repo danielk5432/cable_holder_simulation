@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://dq0xsoxyp7eaj"]
+
+[ext_resource type="Script" uid="uid://dpnv3rvv1tctk" path="res://script/model_control.gd" id="1_dem37"]
+[ext_resource type="ArrayMesh" uid="uid://q1lpnj06ue5o" path="res://model/Lower Panel.obj" id="1_hifu5"]
+[ext_resource type="ArrayMesh" uid="uid://doxbihhicd53x" path="res://model/Middle Panel.obj" id="2_dem37"]
+[ext_resource type="ArrayMesh" uid="uid://deoq60kv1j4ma" path="res://model/Upper Panel.obj" id="3_b4sdb"]
+[ext_resource type="ArrayMesh" uid="uid://382pufx1xsuy" path="res://model/Tension Lever.obj" id="4_wqg0l"]
+[ext_resource type="ArrayMesh" uid="uid://dvxi0blr187di" path="res://model/Powl.obj" id="5_vsvwu"]
+[ext_resource type="ArrayMesh" uid="uid://uobwrk58q0ww" path="res://model/Shaft.obj" id="6_au0gm"]
+[ext_resource type="ArrayMesh" uid="uid://c2wwiml4onv36" path="res://model/Spring Housing.obj" id="7_fq0j8"]
+[ext_resource type="ArrayMesh" uid="uid://cfxlw567nhm4x" path="res://model/Spring.obj" id="8_ifnfc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dem37"]
+
+[node name="3dModel" type="Node3D"]
+script = ExtResource("1_dem37")
+
+[node name="LowerPanel" type="Node3D" parent="."]
+
+[node name="Model" type="MeshInstance3D" parent="LowerPanel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
+mesh = ExtResource("1_hifu5")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dem37")
+
+[node name="MiddlePanel" type="Node3D" parent="."]
+
+[node name="Model" type="MeshInstance3D" parent="MiddlePanel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
+mesh = ExtResource("2_dem37")
+skeleton = NodePath("../..")
+
+[node name="UpperPanel" type="Node3D" parent="."]
+
+[node name="Model" type="MeshInstance3D" parent="UpperPanel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
+mesh = ExtResource("3_b4sdb")
+skeleton = NodePath("../..")
+
+[node name="TensionLever" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.5, 0)
+
+[node name="Model" type="MeshInstance3D" parent="TensionLever"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5, 0)
+mesh = ExtResource("4_wqg0l")
+skeleton = NodePath("../..")
+
+[node name="Powl" type="Node3D" parent="."]
+
+[node name="Model" type="MeshInstance3D" parent="Powl"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
+mesh = ExtResource("5_vsvwu")
+skeleton = NodePath("../..")
+
+[node name="Shaft" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.5, 0)
+
+[node name="Model" type="MeshInstance3D" parent="Shaft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.5, 0)
+mesh = ExtResource("6_au0gm")
+skeleton = NodePath("../..")
+
+[node name="SpringHousing" type="Node3D" parent="."]
+
+[node name="Model" type="MeshInstance3D" parent="SpringHousing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
+mesh = ExtResource("7_fq0j8")
+skeleton = NodePath("../..")
+
+[node name="Spring" type="Node3D" parent="."]
+
+[node name="Model" type="MeshInstance3D" parent="Spring"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19209e-07, 0)
+mesh = ExtResource("8_ifnfc")
+skeleton = NodePath("../..")

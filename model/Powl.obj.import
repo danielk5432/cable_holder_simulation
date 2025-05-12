@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvxi0blr187di"
+path="res://.godot/imported/Powl.obj-956c4d0c3201231ec17e6e237b3defbe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Powl.obj-956c4d0c3201231ec17e6e237b3defbe.mesh"]
+
+source_file="res://model/Powl.obj"
+dest_files=["res://.godot/imported/Powl.obj-956c4d0c3201231ec17e6e237b3defbe.mesh", "res://.godot/imported/Powl.obj-956c4d0c3201231ec17e6e237b3defbe.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
