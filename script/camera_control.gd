@@ -9,7 +9,7 @@ var last_mouse_pos := Vector2.ZERO
 
 var distance := 60.0  # 초기 줌 거리
 var zoom_speed := 1.2
-var min_distance := 30.0
+var min_distance := 10.0
 var max_distance := 100.0
 
 func _ready():
@@ -40,16 +40,16 @@ func _unhandled_input(event):
 
 func rotate_camera(delta: Vector2):
 	var rotation_speed = 0.005
-	pivot.rotate_y(-delta.x * rotation_speed)
+	rotate_y(-delta.x * rotation_speed)
 	pivot.rotate_x(-delta.y * rotation_speed)
 	pivot.rotation_degrees.x = clamp(pivot.rotation_degrees.x, -85, 85)
 
 func pan_camera(delta: Vector2):
 	var pan_speed = 0.01 * distance
 	var right = -pivot.transform.basis.x
-	var up = pivot.transform.basis.y
+	var up = transform.basis.y
 	var offset = (right * delta.x + up * delta.y) * pan_speed
-	global_position += offset
+	pivot.position += offset
 
 func update_camera_position():
 	camera.transform.origin = Vector3(0, 0, distance)

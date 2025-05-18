@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://cl3by4u5w63eb"]
+[gd_scene load_steps=8 format=3 uid="uid://cl3by4u5w63eb"]
 
 [ext_resource type="PackedScene" uid="uid://dq0xsoxyp7eaj" path="res://scene/3d_model.tscn" id="1_4ulk4"]
+[ext_resource type="PackedScene" uid="uid://dnlo3lctvra6" path="res://scene/line_curve.tscn" id="2_uwngr"]
 [ext_resource type="Script" uid="uid://cnf2ebmadu4af" path="res://script/camera_control.gd" id="2_wx3ht"]
+[ext_resource type="PackedScene" uid="uid://ck7r3rovxwri6" path="res://scene/line_test.tscn" id="4_uwngr"]
 
 [sub_resource type="Environment" id="Environment_4ulk4"]
 background_mode = 1
 background_color = Color(0.561, 0.671783, 0.85, 1)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_uwngr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uwngr"]
+size = Vector3(727.76, 4.243, 1)
 
 [node name="Mainscene" type="Node3D"]
 
@@ -27,3 +34,33 @@ light_energy = 0.6
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.300479, 0.587347, -0.751489, 0.814383, -0.568121, -0.118404, -0.496481, -0.576422, -0.649034, 26.6194, 127.083, 30.2276)
 light_energy = 0.6
+
+[node name="Line" type="Node3D" parent="."]
+
+[node name="LineCurve" parent="Line" instance=ExtResource("2_uwngr")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.933456, 0.0587492, 0.861072)
+
+[node name="LineEnd" type="Node3D" parent="Line/LineCurve"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8981, -12.5193, 10.914)
+
+[node name="LineSegments" parent="Line" instance=ExtResource("4_uwngr")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -32, -27, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.997, -28.9843, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.363371, 0)
+shape = SubResource("WorldBoundaryShape3D_uwngr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 2.07733)
+shape = SubResource("WorldBoundaryShape3D_uwngr")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -363.075, 2, -1.984)
+shape = SubResource("BoxShape3D_uwngr")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -363.075, 4.41, 0.363)
+shape = SubResource("BoxShape3D_uwngr")

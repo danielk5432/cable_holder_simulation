@@ -17,7 +17,7 @@ var shaft_rotation = 0.0
 func _ready():
 	for child in get_children():
 		if child is Node3D:
-			original_positions[child] = child.transform.origin
+			original_positions[child.get_node("Model")] = child.get_node("Model").transform.origin
 	rotate_objects = [$TensionLever, $Shaft]
 
 func _input(event):
@@ -44,9 +44,9 @@ func calculate_exploded_positions():
 	var spacing = 15.0  # 펼쳐질 거리
 	var count = get_child_count()
 	for i in range(count):
-		var child = get_child(i)
-		if child is Node3D:
-			var offset = Vector3(0, 0, (i - count / 2.0) * spacing)
+		var child = get_child(i).get_node("Model")
+		if child is MeshInstance3D:
+			var offset = Vector3(0, 0, (i - count + 1) * spacing)
 			exploded[child] = original_positions[child] + offset
 	return exploded
 

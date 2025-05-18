@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://mmrkja8evf02"]
+
+[node name="LineJoint" type="ConeTwistJoint3D"]
+swing_span = 1.0472
+twist_span = 0.349066
+bias = 0.1
+softness = 0.5
+relaxation = 0.5
