@@ -8,10 +8,9 @@ absorbent = true
 radius = 1.3
 height = 5.0
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_f18h8"]
-top_radius = 1.3
-bottom_radius = 1.3
-height = 6.0
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_us8gv"]
+radius = 1.3
+height = 8.0
 
 [sub_resource type="Skin" id="Skin_f18h8"]
 
@@ -24,6 +23,6 @@ gravity_scale = 0.0
 shape = SubResource("CapsuleShape3D_us8gv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CylinderMesh_f18h8")
+mesh = SubResource("CapsuleMesh_us8gv")
 skin = SubResource("Skin_f18h8")
 skeleton = NodePath("../..")
