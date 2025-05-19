@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://mmrkja8evf02"]
+[gd_scene load_steps=2 format=3 uid="uid://mmrkja8evf02"]
+
+[ext_resource type="Script" uid="uid://dohxj48hub1oh" path="res://script/line_joint_save.gd" id="1_wburh"]
 
 [node name="LineJoint" type="ConeTwistJoint3D"]
 swing_span = 1.0472
@@ -6,3 +8,4 @@ twist_span = 0.349066
 bias = 0.1
 softness = 0.5
 relaxation = 0.5
+script = ExtResource("1_wburh")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dviwel0vkod0w"]
+
+[ext_resource type="Script" uid="uid://dyl2tamfaqqkk" path="res://script/line_end_save.gd" id="1_5myw6"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hyfil"]
+radius = 1.2
+
+[node name="LineEnd" type="RigidBody3D"]
+mass = 100.0
+gravity_scale = 0.0
+script = ExtResource("1_5myw6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_hyfil")

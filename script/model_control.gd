@@ -10,7 +10,6 @@ var rotation_min = 0.0
 var rotation_max = 720.0
 var rotation_speed = 5.0
 
-
 var rotation_dir = 0
 var shaft_rotation = 0.0
 

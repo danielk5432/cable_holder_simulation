@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cl3by4u5w63eb"]
+[gd_scene load_steps=9 format=3 uid="uid://cl3by4u5w63eb"]
 
 [ext_resource type="PackedScene" uid="uid://dq0xsoxyp7eaj" path="res://scene/3d_model.tscn" id="1_4ulk4"]
+[ext_resource type="Script" uid="uid://cplc4b2g3mpwk" path="res://script/mainscene.gd" id="1_8ajfr"]
 [ext_resource type="PackedScene" uid="uid://dnlo3lctvra6" path="res://scene/line_curve.tscn" id="2_uwngr"]
 [ext_resource type="Script" uid="uid://cnf2ebmadu4af" path="res://script/camera_control.gd" id="2_wx3ht"]
 [ext_resource type="PackedScene" uid="uid://ck7r3rovxwri6" path="res://scene/line_test.tscn" id="4_uwngr"]
@@ -15,6 +16,7 @@ background_color = Color(0.561, 0.671783, 0.85, 1)
 size = Vector3(727.76, 4.243, 1)
 
 [node name="Mainscene" type="Node3D"]
+script = ExtResource("1_8ajfr")
 
 [node name="3dModel" parent="." instance=ExtResource("1_4ulk4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
