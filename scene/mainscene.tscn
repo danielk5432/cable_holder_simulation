@@ -40,7 +40,7 @@ light_energy = 0.6
 [node name="Line" type="Node3D" parent="."]
 
 [node name="LineCurve" parent="Line" instance=ExtResource("2_uwngr")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.933456, 0.0587492, 0.861072)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.933456, 0.0587492, 0.861072)
 
 [node name="LineEnd" type="Node3D" parent="Line/LineCurve"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8981, -12.5193, 10.914)

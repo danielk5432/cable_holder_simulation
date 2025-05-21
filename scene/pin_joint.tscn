@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c7dpwfxuwt0fi"]
 
-[ext_resource type="Script" uid="uid://pbu8y8cnp2ts" path="res://pin_joint_save.gd" id="1_4yahv"]
+[ext_resource type="Script" uid="uid://pbu8y8cnp2ts" path="res://script/pin_joint_save.gd" id="1_4yahv"]
 
 [node name="Joint" type="PinJoint3D"]
 script = ExtResource("1_4yahv")

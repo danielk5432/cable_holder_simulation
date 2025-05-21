@@ -7,8 +7,8 @@ func save():
 		"pos_x" : position.x, # Vector2 is not supported by JSON
 		"pos_y" : position.y,
 		"pos_z" : position.z,
-		"rot.x" : rotation.x,
-		"rot.y" : rotation.y,
-		"rot.z" : rotation.z
+		"rot_x" : rotation.x,
+		"rot_y" : rotation.y,
+		"rot_z" : rotation.z
 	}
-	return save_dict
+	return save_dict	

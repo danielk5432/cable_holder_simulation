@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://b3vegtd722bbx" path="res://script/line_segment_save.gd" id="1_mrjgf"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f28no"]
-friction = 0.0
+friction = 0.1
+rough = true
 absorbent = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_us8gv"]
@@ -18,8 +19,11 @@ height = 8.5
 
 [node name="LineSegment" type="RigidBody3D"]
 transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
+mass = 10.0
 physics_material_override = SubResource("PhysicsMaterial_f28no")
 gravity_scale = 0.0
+linear_damp = 0.3
+angular_damp = 0.1
 script = ExtResource("1_mrjgf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

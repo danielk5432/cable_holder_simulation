@@ -53,12 +53,12 @@ func explode():
 	exploded_positions = calculate_exploded_positions()
 	var tween = create_tween().set_parallel(true)
 	for child in exploded_positions:
-		tween.tween_property(child, "position", exploded_positions[child], 0.3)
+		tween.tween_property(child, "position", exploded_positions[child], 1)
 
 func implode():
 	var tween = create_tween().set_parallel(true)
 	for child in original_positions:
-		tween.tween_property(child, "position", original_positions[child], 0.3)
+		tween.tween_property(child, "position", original_positions[child], 1)
 
 func rotate_shaft(dir : int):
 	shaft_rotation += dir * rotation_speed
