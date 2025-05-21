@@ -17,9 +17,9 @@ func _ready():
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
+		if event.button_index == MOUSE_BUTTON_RIGHT:
 			panning = event.pressed
-		elif event.button_index == MOUSE_BUTTON_MIDDLE:
+		elif event.button_index == MOUSE_BUTTON_LEFT:
 			orbiting = event.pressed
 
 		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
