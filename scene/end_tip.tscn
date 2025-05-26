@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://xf4otijdnq8v"]
 
-[ext_resource type="ArrayMesh" uid="uid://b02ta33eli5kn" path="res://model/cable_end_tip.obj" id="1_8q6cr"]
-[ext_resource type="ArrayMesh" uid="uid://ko5gi5xui1ff" path="res://model/cable_end_case.obj" id="2_aofdi"]
+[ext_resource type="ArrayMesh" uid="uid://b02ta33eli5kn" path="res://model/cable/cable_end_tip.obj" id="1_8q6cr"]
+[ext_resource type="ArrayMesh" uid="uid://ko5gi5xui1ff" path="res://model/cable/cable_end_case.obj" id="2_aofdi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8q6cr"]
 albedo_color = Color(0.74902, 0.74902, 0.74902, 1)

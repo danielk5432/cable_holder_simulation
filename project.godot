@@ -13,7 +13,7 @@ config_version=5
 config/name="Cable_Holder"
 run/main_scene="uid://cl3by4u5w63eb"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://old/icon.svg"
+config/icon="res://model/old/icon.svg"
 
 [input]
 

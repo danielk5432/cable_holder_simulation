@@ -1,14 +1,14 @@
 [gd_scene load_steps=15 format=3 uid="uid://dq0xsoxyp7eaj"]
 
 [ext_resource type="Script" uid="uid://dpnv3rvv1tctk" path="res://script/model_control.gd" id="1_dem37"]
-[ext_resource type="ArrayMesh" uid="uid://q1lpnj06ue5o" path="res://model/Lower Panel.obj" id="1_hifu5"]
-[ext_resource type="ArrayMesh" uid="uid://doxbihhicd53x" path="res://model/Middle Panel.obj" id="2_dem37"]
-[ext_resource type="ArrayMesh" uid="uid://deoq60kv1j4ma" path="res://model/Upper Panel.obj" id="3_b4sdb"]
-[ext_resource type="ArrayMesh" uid="uid://382pufx1xsuy" path="res://model/Tension Lever.obj" id="4_wqg0l"]
-[ext_resource type="ArrayMesh" uid="uid://dvxi0blr187di" path="res://model/Powl.obj" id="5_vsvwu"]
-[ext_resource type="ArrayMesh" uid="uid://uobwrk58q0ww" path="res://model/Shaft.obj" id="6_au0gm"]
-[ext_resource type="ArrayMesh" uid="uid://c2wwiml4onv36" path="res://model/Spring Housing.obj" id="7_fq0j8"]
-[ext_resource type="ArrayMesh" uid="uid://cfxlw567nhm4x" path="res://model/Spring.obj" id="8_ifnfc"]
+[ext_resource type="ArrayMesh" uid="uid://q1lpnj06ue5o" path="res://model/v1/Lower Panel.obj" id="1_hifu5"]
+[ext_resource type="ArrayMesh" uid="uid://doxbihhicd53x" path="res://model/v1/Middle Panel.obj" id="2_dem37"]
+[ext_resource type="ArrayMesh" uid="uid://deoq60kv1j4ma" path="res://model/v1/Upper Panel.obj" id="3_b4sdb"]
+[ext_resource type="ArrayMesh" uid="uid://382pufx1xsuy" path="res://model/v1/Tension Lever.obj" id="4_wqg0l"]
+[ext_resource type="ArrayMesh" uid="uid://dvxi0blr187di" path="res://model/v1/Powl.obj" id="5_vsvwu"]
+[ext_resource type="ArrayMesh" uid="uid://uobwrk58q0ww" path="res://model/v1/Shaft.obj" id="6_au0gm"]
+[ext_resource type="ArrayMesh" uid="uid://c2wwiml4onv36" path="res://model/v1/Spring Housing.obj" id="7_fq0j8"]
+[ext_resource type="ArrayMesh" uid="uid://cfxlw567nhm4x" path="res://model/v1/Spring.obj" id="8_ifnfc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dem37"]
 

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c2wwiml4onv36"
+path="res://.godot/imported/Spring Housing.obj-94e986c5fa60bdb29d6acb5bf7c1acee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Spring Housing.obj-94e986c5fa60bdb29d6acb5bf7c1acee.mesh"]
+
+source_file="res://model/v1/Spring Housing.obj"
+dest_files=["res://.godot/imported/Spring Housing.obj-94e986c5fa60bdb29d6acb5bf7c1acee.mesh", "res://.godot/imported/Spring Housing.obj-94e986c5fa60bdb29d6acb5bf7c1acee.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
