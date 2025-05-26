@@ -13,7 +13,7 @@ background_color = Color(0.561, 0.671783, 0.85, 1)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_uwngr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uwngr"]
-size = Vector3(727.76, 4.243, 1)
+size = Vector3(727.76, 8.863, 3.97)
 
 [node name="Mainscene" type="Node3D"]
 script = ExtResource("1_8ajfr")
@@ -60,9 +60,9 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 shape = SubResource("WorldBoundaryShape3D_uwngr")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -363.075, 2, -1.984)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -363.075, 2, -3.854)
 shape = SubResource("BoxShape3D_uwngr")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -363.075, 4.41, 0.363)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -363.075, 5.78, 0.363)
 shape = SubResource("BoxShape3D_uwngr")

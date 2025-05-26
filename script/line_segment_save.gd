@@ -12,3 +12,8 @@ func save():
 		"rot_z" : rotation.z
 	}
 	return save_dict	
+
+func _physics_process(delta):
+	if global_position.y < -25 && global_position.x < -23:
+		global_rotation = Vector3(0, 0, -PI/2)
+		global_position = Vector3(global_position.x, -27, 0)
