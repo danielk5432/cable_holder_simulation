@@ -1,5 +1,4 @@
-extends ConeTwistJoint3D
-
+extends Generic6DOFJoint3D
 func save():
 	var save_dict = {
 		"filename" : get_scene_file_path(),

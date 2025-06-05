@@ -1,31 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnlo3lctvra6"]
+[gd_scene load_steps=7 format=3 uid="uid://dnlo3lctvra6"]
 
 [ext_resource type="ArrayMesh" uid="uid://b0ugmmnygeg64" path="res://model/cable/line_end_curve.obj" id="1_0ahf7"]
+[ext_resource type="Material" uid="uid://jip5xy32k3bq" path="res://material/line.tres" id="2_chsnw"]
 [ext_resource type="ArrayMesh" uid="uid://b02ta33eli5kn" path="res://model/cable/cable_end_tip.obj" id="2_wqd0b"]
+[ext_resource type="Material" uid="uid://bwyig3fe3ej6f" path="res://material/tip_metal.tres" id="3_chsnw"]
 [ext_resource type="ArrayMesh" uid="uid://ko5gi5xui1ff" path="res://model/cable/cable_end_case.obj" id="3_j0qr0"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chsnw"]
-albedo_color = Color(0.75, 0.75, 0.75, 1)
-metallic = 1.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlxld"]
-albedo_color = Color(0.36, 0.36, 0.36, 1)
-metallic = 1.0
+[ext_resource type="Material" uid="uid://vbu2d4n3r32k" path="res://material/tip_casing.tres" id="4_wqd0b"]
 
 [node name="LineCurve" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_0ahf7")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_chsnw")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("2_wqd0b")
 skeleton = NodePath("../MeshInstance3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_chsnw")
+surface_material_override/0 = ExtResource("3_chsnw")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("3_j0qr0")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_wlxld")
+surface_material_override/0 = ExtResource("4_wqd0b")

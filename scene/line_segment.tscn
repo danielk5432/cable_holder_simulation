@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c41u7uobk6d2d"]
+[gd_scene load_steps=7 format=3 uid="uid://c41u7uobk6d2d"]
 
 [ext_resource type="Script" uid="uid://b3vegtd722bbx" path="res://script/line_segment_save.gd" id="1_mrjgf"]
+[ext_resource type="Material" uid="uid://jip5xy32k3bq" path="res://material/line.tres" id="2_krdxe"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f28no"]
 friction = 0.1
@@ -12,6 +13,7 @@ radius = 1.3
 height = 5.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_us8gv"]
+material = ExtResource("2_krdxe")
 radius = 1.5
 height = 8.5
 

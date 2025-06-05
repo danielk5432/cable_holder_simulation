@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cl3by4u5w63eb"]
 
-[ext_resource type="PackedScene" uid="uid://dq0xsoxyp7eaj" path="res://scene/3d_model.tscn" id="1_4ulk4"]
 [ext_resource type="Script" uid="uid://cplc4b2g3mpwk" path="res://script/mainscene.gd" id="1_8ajfr"]
+[ext_resource type="PackedScene" uid="uid://bie5sq5aelgxt" path="res://scene/3d_model_v2.tscn" id="2_8ajfr"]
 [ext_resource type="PackedScene" uid="uid://dnlo3lctvra6" path="res://scene/line_curve.tscn" id="2_uwngr"]
 [ext_resource type="Script" uid="uid://cnf2ebmadu4af" path="res://script/camera_control.gd" id="2_wx3ht"]
 [ext_resource type="PackedScene" uid="uid://ck7r3rovxwri6" path="res://scene/line_test.tscn" id="4_uwngr"]
@@ -18,8 +18,8 @@ size = Vector3(727.76, 8.863, 3.97)
 [node name="Mainscene" type="Node3D"]
 script = ExtResource("1_8ajfr")
 
-[node name="3dModel" parent="." instance=ExtResource("1_4ulk4")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="3dModel" parent="." instance=ExtResource("2_8ajfr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0533714)
 
 [node name="CameraRig" type="Node3D" parent="."]
 script = ExtResource("2_wx3ht")
@@ -40,19 +40,19 @@ light_energy = 0.6
 [node name="Line" type="Node3D" parent="."]
 
 [node name="LineCurve" parent="Line" instance=ExtResource("2_uwngr")]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.933456, 0.0587492, 0.861072)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.933456, 0.0587492, 0.861072)
 
 [node name="LineEnd" type="Node3D" parent="Line/LineCurve"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8981, -12.5193, 10.914)
 
 [node name="LineSegments" parent="Line" instance=ExtResource("4_uwngr")]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -32, -27, 0)
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 3.59989e-21, 4.37114e-08, -1, -4.37114e-08, 28, -28, 20)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.997, -28.9843, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28.0897, -29.4284, 19.9831)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.363371, 0)
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, -0.574759, 0)
 shape = SubResource("WorldBoundaryShape3D_uwngr")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]

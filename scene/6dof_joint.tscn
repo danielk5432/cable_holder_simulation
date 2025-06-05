@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7pkq5p2n72nh"]
+
+[ext_resource type="Script" uid="uid://cse544uatawoy" path="res://script/6_dof_joint.gd" id="1_jqvsd"]
+
+[node name="Node3D" type="Generic6DOFJoint3D"]
+linear_limit_x/damping = 0.7
+linear_limit_y/softness = 1.5
+linear_limit_z/damping = 0.7
+angular_limit_x/upper_angle = 1.0472
+angular_limit_x/lower_angle = -1.0472
+angular_limit_z/upper_angle = 1.0472
+angular_limit_z/lower_angle = -1.0472
+angular_spring_x/enabled = true
+angular_spring_z/enabled = true
+script = ExtResource("1_jqvsd")

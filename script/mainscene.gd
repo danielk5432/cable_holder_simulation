@@ -5,13 +5,13 @@ var rotate_objects = []
 
 var rotation_min = 0.0
 var rotation_max = 360.0 * 3.75
-var rotation_speed = 2.0
+var rotation_speed = 1.5
 var rot = 0.0
 var rotation_dir = 0
 
 var line_end: Node3D
-var x_max = -64
-var line_speed = 0.43
+var x_max = 40
+var line_speed = 0.45
 
 func _ready():
 	Engine.set_time_scale(3)
@@ -39,5 +39,5 @@ func rotate_shaft(dir : int):
 		rot_obj.rotation_degrees.z = rot
 
 func move_line_end():
-	line_end.global_position.x = x_max - rot * line_speed
+	line_end.global_position.z = x_max + rot * line_speed
 	

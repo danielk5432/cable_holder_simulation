@@ -1,7 +1,11 @@
 extends Node3D
 
+const TARGET_SPEED = -50.0  # 원하는 z축 속도
+const FORCE_STRENGTH = 30.0  # 얼마나 세게 밀지
+const MAX_FORCE_SPEED = -80.0  # 너무 빨라지지 않도록
+
 var line_segment = preload("res://scene/line_segment.tscn")
-var line_joint = preload("res://scene/line_joint.tscn")
+var line_joint = preload("res://scene/6dof_joint.tscn")
 var line_tip = preload("res://scene/end_tip.tscn")
 var line_list = []
 var segment_list = []
@@ -10,6 +14,7 @@ var length = 108
 var angle := 0.0
 var reeling := false
 var connected := false
+var apply_force := false
 
 func _ready():
 	make_line()
@@ -21,10 +26,19 @@ func _process(delta):
 		var radius = 25.5
 		var x = sin(angle) * radius
 		var y = -cos(angle) * radius
-		var z = -1.1 * angle / PI
+		var z = -1.7 * angle / PI + 1
 		$LineStart.global_position = Vector3(x, y, z)
 	if connected:
 		$LineStart.global_position = get_tree().get_root().get_node("Mainscene/Line/LineCurve/LineEnd").global_position
+	if apply_force:
+		for i in range(length):
+			var body = line_list[i]
+			var current_speed = body.linear_velocity.z
+
+			# 현재 속도가 목표보다 느릴 때만 힘을 가함
+			if current_speed > TARGET_SPEED:
+				body.apply_central_force(Vector3(0, 0, -FORCE_STRENGTH))
+
 
 func make_line():
 	line_list.append($LineSegment)
@@ -33,6 +47,7 @@ func make_line():
 		var line = line_segment.instantiate()
 		line.position = Vector3(0, -6 * (i+1), 0)
 		add_child(line)
+		line.idx = i
 		
 		var joint = line_joint.instantiate()
 		joint.position = Vector3(0, -6 * (i+1) + 3, 0)
@@ -63,10 +78,43 @@ func reel_in():
 		$LineEnd.linear_velocity = Vector3.ZERO
 		$LineStart.freeze = true
 		connected = true
-		get_tree().get_root().get_node("Mainscene").rotate_flag = true
+		get_tree().get_root().get_node("Mainscene").cable_rotate_flag = true
 		save_cable()
 		print("save complete")
 	)
+
+func reel_in_v2():
+	
+	print($LineStart.global_position)
+	var tween = create_tween()
+	tween.tween_property($LineStart, "global_position", Vector3(28, -27, 0), 1.5)
+	tween.tween_property($LineStart, "global_position", Vector3(0, -27, 0), 2.5)
+	tween.tween_callback(func():
+		reeling = true
+		apply_force = true
+	)
+	tween.tween_property(self, "angle", -5.5 * PI, 50.0).set_delay(0.1)  # 회전 시작
+	tween.tween_property(self, "angle", -7.5 * PI, 60.0).set_delay(0.1)
+	
+	var endpos = get_tree().get_root().get_node("Mainscene/Line/LineCurve/LineEnd").global_position
+	tween.tween_property($LineStart, "global_position", endpos, 3)
+	tween.finished.connect(func():
+		apply_force = false
+		reeling = false
+		for i in line_list:
+			i.linear_velocity = Vector3.ZERO
+		#$LineEnd.linear_velocity = Vector3.ZERO
+		connected = true
+		get_tree().get_root().get_node("Mainscene").cable_rotate_flag = true
+		save_cable()
+		print("save complete")
+	)
+
+
+
+
+
+
 
 func save_cable():
 	var save_file = FileAccess.open("res://cable_pos.save", FileAccess.WRITE)

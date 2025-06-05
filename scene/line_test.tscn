@@ -10,6 +10,7 @@ script = ExtResource("1_hyfil")
 
 [node name="LineStart" parent="." instance=ExtResource("2_hpums")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+freeze = true
 
 [node name="JointStart" parent="." instance=ExtResource("3_k4rsw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

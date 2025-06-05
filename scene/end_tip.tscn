@@ -1,15 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://xf4otijdnq8v"]
 
 [ext_resource type="ArrayMesh" uid="uid://b02ta33eli5kn" path="res://model/cable/cable_end_tip.obj" id="1_8q6cr"]
+[ext_resource type="Material" uid="uid://bwyig3fe3ej6f" path="res://material/tip_metal.tres" id="2_0ua0q"]
 [ext_resource type="ArrayMesh" uid="uid://ko5gi5xui1ff" path="res://model/cable/cable_end_case.obj" id="2_aofdi"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8q6cr"]
-albedo_color = Color(0.74902, 0.74902, 0.74902, 1)
-metallic = 1.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aofdi"]
-albedo_color = Color(0.360784, 0.360784, 0.360784, 1)
-metallic = 1.0
+[ext_resource type="Material" uid="uid://vbu2d4n3r32k" path="res://material/tip_casing.tres" id="3_aofdi"]
 
 [node name="EndTip" type="Node3D"]
 
@@ -19,9 +13,9 @@ transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
 mesh = ExtResource("1_8q6cr")
 skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_8q6cr")
+surface_material_override/0 = ExtResource("2_0ua0q")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
 mesh = ExtResource("2_aofdi")
 skeleton = NodePath("../MeshInstance3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_aofdi")
+surface_material_override/0 = ExtResource("3_aofdi")

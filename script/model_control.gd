@@ -15,9 +15,9 @@ var shaft_rotation = 0.0
 
 func _ready():
 	for child in get_children():
-		if child is Node3D:
+		if child is Node3D and child.name != "Pulley" and child.name != "Spring":
 			original_positions[child.get_node("Model")] = child.get_node("Model").transform.origin
-	rotate_objects = [$TensionLever, $Shaft]
+	#rotate_objects = [$TensionLever, $Shaft]
 
 func _input(event):
 	if event.is_action_pressed("explode") and explode_flag:
@@ -41,7 +41,7 @@ func _process(delta):
 func calculate_exploded_positions():
 	var exploded = {}
 	var spacing = 15.0  # 펼쳐질 거리
-	var count = get_child_count()
+	var count = get_child_count()-2
 	for i in range(count):
 		var child = get_child(i).get_node("Model")
 		if child is MeshInstance3D:

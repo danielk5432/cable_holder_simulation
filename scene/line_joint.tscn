@@ -6,6 +6,6 @@
 swing_span = 1.0472
 twist_span = 0.349066
 bias = 0.1
-softness = 0.5
+softness = 0.4
 relaxation = 0.7
 script = ExtResource("1_wburh")
