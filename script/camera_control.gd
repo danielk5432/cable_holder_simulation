@@ -10,7 +10,7 @@ var last_mouse_pos := Vector2.ZERO
 var distance := 60.0  # 초기 줌 거리
 var zoom_speed := 1.2
 var min_distance := 10.0
-var max_distance := 150.0
+var max_distance := 200.0
 
 func _ready():
 	update_camera_position()

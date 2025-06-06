@@ -16,7 +16,7 @@ func save():
 	return save_dict	
 
 func _physics_process(delta):
-	if global_position.x > 20 and global_position.y < -26 and global_position.z > 13:
+	if global_position.x > 20 and global_position.y < -26 and global_position.z > 15:
 		global_rotation = Vector3(0, PI/2, PI/-2)
 		global_position = Vector3(28, -28, global_position.z)
 	elif global_position.x > 15 and global_position.y < -23 and idx > 10:

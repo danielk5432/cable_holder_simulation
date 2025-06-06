@@ -140,11 +140,11 @@ func save_cable():
 		save_file.store_line(json_string)
 
 func load_cable():
-	if not FileAccess.file_exists("cable_pos.save"):
+	if not FileAccess.file_exists("res://cable_pos.save"):
 		return # 저장된 파일이 없으면 종료
 
 	# 저장 파일 열기
-	var save_file = FileAccess.open("cable_pos.save", FileAccess.READ)
+	var save_file = FileAccess.open("res://cable_pos.save", FileAccess.READ)
 
 	# 저장된 순서대로 인스턴스된 노드에 transform 적용
 	var index := 0

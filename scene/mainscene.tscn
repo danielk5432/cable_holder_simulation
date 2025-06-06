@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cl3by4u5w63eb"]
+[gd_scene load_steps=10 format=3 uid="uid://cl3by4u5w63eb"]
 
 [ext_resource type="Script" uid="uid://cplc4b2g3mpwk" path="res://script/mainscene.gd" id="1_8ajfr"]
 [ext_resource type="PackedScene" uid="uid://bie5sq5aelgxt" path="res://scene/3d_model_v2.tscn" id="2_8ajfr"]
@@ -14,6 +14,9 @@ background_color = Color(0.561, 0.671783, 0.85, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uwngr"]
 size = Vector3(727.76, 8.863, 3.97)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ajfr"]
+size = Vector3(10, 5, 10)
 
 [node name="Mainscene" type="Node3D"]
 script = ExtResource("1_8ajfr")
@@ -31,6 +34,10 @@ environment = SubResource("Environment_4ulk4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.272104, -0.938087, 0.214365, 0.890992, 0.329757, 0.312079, -0.363445, 0.106079, 0.925556, 25.7446, 50, -125.882)
+light_energy = 0.6
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.376871, -0.719483, -0.583363, -0.581173, -0.306732, 0.75376, -0.721253, 0.623105, -0.302545, -41.1391, 50.141, -2.5517)
 light_energy = 0.6
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
@@ -66,3 +73,7 @@ shape = SubResource("BoxShape3D_uwngr")
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -363.075, 5.78, 0.363)
 shape = SubResource("BoxShape3D_uwngr")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9344, 10.6066, 1.10045)
+shape = SubResource("BoxShape3D_8ajfr")

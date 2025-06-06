@@ -26,19 +26,14 @@ func _ready():
 	if body_a == null or body_b == null:
 		push_warning("ConeTwistJoint3D: 연결된 바디를 찾을 수 없습니다.")
 
+	
+	
+var initialized = false
+
+	
+
 func _physics_process(delta):
 	if body_a == null or body_b == null:
 		return
-
-	var pos_a = body_a.global_transform.origin
-	var pos_b = body_b.global_transform.origin
-	var delta_vec = pos_b - pos_a
-	var distance = delta_vec.length()
-
-	if distance > max_length:
-		var direction = delta_vec.normalized()
-		var force = direction * (distance - max_length) * stiffness
-
-		# 서로 당기는 방향으로 힘을 가함
-		body_a.apply_central_impulse(force)
-		body_b.apply_central_impulse(-force)
+	
+	
